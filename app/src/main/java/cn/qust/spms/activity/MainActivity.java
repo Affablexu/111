@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
@@ -13,14 +12,11 @@ import org.xutils.x;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import cn.qust.spms.R;
-import cn.qust.spms.dao.UserDao;
+import cn.qust.spms.dao.UserDAO;
 import cn.qust.spms.entity.User;
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
 
 @ContentView(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
@@ -41,23 +37,23 @@ public class MainActivity extends AppCompatActivity {
      */
     @Event(type = View.OnClickListener.class,value = R.id.button)
     private void testInjectOnClick(View v){
-        List<String> a = new ArrayList<>();
-        a.add("1");
-        a.add("2");
-        a.add("3");
-        a.add("4");
-        User u = new User();
-        u.setId(1);
-        u.setName("admin");
-        u.setPassword("123");
-        new UserDao().save(u);
-        User u1 = new User();
-        u1.setId(2);
-        u1.setName("admin1");
-        u1.setPassword("1234");
-        new UserDao().save(u1);
 
+//        User u = new User();
+//        u.setId(1);
+//        u.setName("admin");
+//        u.setPassword("123");
+//        new UserDAO().save(u);
+//        User u1 = new User();
+//        u1.setId(2);
+//        u1.setName("admin1");
+//        u1.setPassword("1234");
+//        new UserDAO().save(u1);
 
+        new UserDAO().deleteByPrimaryKey(3);
+
+        List<User> users = new UserDAO().listAll();
+
+        System.out.println(users);
 
 
     }
