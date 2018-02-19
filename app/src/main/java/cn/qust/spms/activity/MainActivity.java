@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     @Event(type = View.OnClickListener.class,value = R.id.button)
     private void testInjectOnClick(View v){
 
+//        关键技术跑通
 //        User u = new User();
 //        u.setId(1);
 //        u.setName("admin");
