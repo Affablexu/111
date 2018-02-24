@@ -20,6 +20,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.QuickStartActivity">
+
+        </activity>
+        <activity android:name=".activity.StartActivity">
+
+        </activity>
+        <activity android:name=".activity.SettingActivity">
+
+        </activity>
+        <activity android:name=".activity.TrainActivity">
+
+        </activity>
+        <activity android:name=".activity.UserInfoActivity">
+
+        </activity>
     </application>
 
 

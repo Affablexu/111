@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="语言"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="器械名称"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="数据保存"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="IC卡读卡器"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="波特率"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="声音"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#335894"
+            android:gravity="center"
+            android:text="密码"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/ll_key"
+        android:orientation="vertical">
+
+
+        <Spinner
+            android:id="@+id/sp_language"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:entries="@array/spingarr" />
+
+        <Spinner
+            android:id="@+id/sp_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:entries="@array/spingarr" />
+
+        <EditText
+            android:id="@+id/et_data_save"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp" />
+
+        <Spinner
+            android:id="@+id/sp_ic_reader"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:entries="@array/spingarr" />
+
+        <Spinner
+            android:id="@+id/sp_bote"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:entries="@array/spingarr" />
+
+        <Spinner
+            android:id="@+id/sp_voice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp"
+            android:entries="@array/spingarr" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="3dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_setting_reflesh"
+        android:layout_width="250dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_selector"
+        android:text="更新"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/btn_setting_back"
+        android:layout_width="250dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"
+        android:background="#942d2d"
+        android:text="返回"
+        android:textColor="#ffffff"
+        android:textSize="50sp" />
+
+</RelativeLayout>

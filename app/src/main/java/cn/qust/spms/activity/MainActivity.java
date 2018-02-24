@@ -1,61 +1,48 @@
 package cn.qust.spms.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
-import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Logger;
-
 import cn.qust.spms.R;
-import cn.qust.spms.dao.UserDAO;
-import cn.qust.spms.entity.User;
 
+/**
+ * Author:Nolle
+ * Datetime:2/22/2018 11:32 AM
+ * Description:主页面显示logo，实现快速开始，开始，设定按钮跳转，如果点击开始，实现姓名确认功能
+ */
 @ContentView(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
-    @ViewInject(R.id.button)
-    Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
         x.view().inject(this);
     }
 
+    @Event(type = View.OnClickListener.class, value = R.id.btn_setting)
+    private void setting(View view) {
+        Intent intent = new Intent();
+        intent.setClassName("cn.qust.spms", "cn.qust.spms.activity.SettingActivity");
+        startActivity(intent);
+    }
 
-    /**
-     * 单击事件
-     * type默认View.OnClickListener.class，故此处可以简化不写，@Event(R.id.bt_main)
-     */
-    @Event(type = View.OnClickListener.class,value = R.id.button)
-    private void testInjectOnClick(View v){
+    @Event(type = View.OnClickListener.class, value = R.id.btn_start)
+    private void start(View view) {
+        Intent intent = new Intent();
+        intent.setClassName("cn.qust.spms", "cn.qust.spms.activity.StartActivity");
+        startActivity(intent);
+    }
 
-//        关键技术跑通
-//        User u = new User();
-//        u.setId(1);
-//        u.setName("admin");
-//        u.setPassword("123");
-//        new UserDAO().save(u);
-//        User u1 = new User();
-//        u1.setId(2);
-//        u1.setName("admin1");
-//        u1.setPassword("1234");
-//        new UserDAO().save(u1);
-
-        new UserDAO().deleteByPrimaryKey(3);
-
-        List<User> users = new UserDAO().listAll();
-
-        System.out.println(users);
-
-
+    @Event(type = View.OnClickListener.class, value = R.id.btn_quick_start)
+    private void quickstart(View view) {
+        Intent intent = new Intent();
+        intent.setClassName("cn.qust.spms", "cn.qust.spms.activity.QuickStartActivity");
+        startActivity(intent);
     }
 }
