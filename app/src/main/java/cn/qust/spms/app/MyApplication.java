@@ -13,6 +13,6 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         x.Ext.init(this);
-        x.Ext.setDebug(false); //输出debug日志，开启会影响性能,lalalalalalalalalal
+        x.Ext.setDebug(false); //输出debug日志，开启会影响性能,lalalalalalalalalallalalla
     }
 }
