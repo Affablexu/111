@@ -27,6 +27,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="cn.qust.spms.activity.QuickStartActivity" >
+        </activity>
+        <activity android:name="cn.qust.spms.activity.StartActivity" >
+        </activity>
+        <activity android:name="cn.qust.spms.activity.SettingActivity" >
+        </activity>
+        <activity android:name="cn.qust.spms.activity.TrainActivity" >
+        </activity>
+        <activity android:name="cn.qust.spms.activity.UserInfoActivity" >
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"
